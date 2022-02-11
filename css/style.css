@@ -37,8 +37,9 @@
 }
 
 .presentation {
-  height: calc(100vh - 265px);
-  padding: 2rem 0;
+  height: calc(100vh - (265px + 2rem));
+  padding: 2rem 0 2rem 0;
+  margin-bottom: 2rem;
 }
 .presentation .presentation-content {
   display: flex;

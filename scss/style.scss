@@ -55,8 +55,9 @@ $font-ubuntu: "Ubuntu", sans-serif;
 }
 
 .presentation {
-  height: calc(100vh - (165px + 100px));
-  padding: 2rem 0;
+  height: calc(100vh - (165px + 100px + 2rem));
+  padding: 2rem 0 2rem 0;
+  margin-bottom: 2rem;
 
   .presentation-content {
     display: flex;
