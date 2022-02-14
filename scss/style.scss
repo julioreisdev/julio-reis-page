@@ -4,10 +4,21 @@ $dark-grey: grey;
 $black: #262a2d;
 $white: #fdfdfd;
 
+//pattern-value-property
+$border-break: 1px solid $light-grey;
+
 //Fonts
 $font-ubuntu: "Ubuntu", sans-serif;
 
-//
+//Efects
+%pattern-link-text {
+  text-transform: uppercase;
+  color: $dark-grey;
+  padding: 0 0.3rem 0.5rem 0.3rem;
+}
+%pattern-link-efect {
+  border-bottom: 2px solid $dark-grey;
+}
 
 .page {
   font-family: $font-ubuntu;
@@ -30,8 +41,7 @@ $font-ubuntu: "Ubuntu", sans-serif;
 
 .header-nav {
   width: 100%;
-  //border-top: 1px solid $light-grey;
-  border-bottom: 1px solid $light-grey;
+  border-bottom: $border-break;
   padding: 1rem 0;
   margin: 1rem 0 0 0;
 
@@ -42,20 +52,18 @@ $font-ubuntu: "Ubuntu", sans-serif;
 
     .item {
       .link {
-        text-transform: uppercase;
-        color: $dark-grey;
-        padding: 0 0.3rem 0.5rem 0.3rem;
+        @extend %pattern-link-text;
       }
 
       .link:hover {
-        border-bottom: 2px solid $dark-grey;
+        @extend %pattern-link-efect
       }
     }
   }
 }
 
 .presentation {
-  height: calc(100vh - (165px + 100px + 2rem));
+  height: auto;
   padding: 2rem 0 2rem 0;
   margin-bottom: 2rem;
 
@@ -84,7 +92,7 @@ $font-ubuntu: "Ubuntu", sans-serif;
 .footer {
   width: 100%;
   height: 100px;
-  border-top: 1px solid $light-grey;
+  border-top: $border-break;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -99,6 +107,7 @@ $font-ubuntu: "Ubuntu", sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     .footer-links-item {
       .footer-links-link {
@@ -106,16 +115,10 @@ $font-ubuntu: "Ubuntu", sans-serif;
           width: 50px;
         }
         p {
-          text-transform: uppercase;
-          color: $dark-grey;
-          padding-bottom: 0.5rem;
+          @extend %pattern-link-text;
 
           &:hover {
-            border-bottom: 1px solid $dark-grey;
-          }
-
-          &:after {
-            content: " | ";
+            @extend %pattern-link-efect
           }
         }
       }
@@ -156,7 +159,6 @@ $font-ubuntu: "Ubuntu", sans-serif;
   }
   .presentation {
     padding: 2rem 0.5rem;
-    height: calc(100vh - (165px + 100px - 1rem));
 
     .presentation-content {
       flex-direction: column;
@@ -184,5 +186,13 @@ $font-ubuntu: "Ubuntu", sans-serif;
     justify-content: space-between;
     align-items: center;
     height: 200px;
+  }
+  .footer-nav {
+    .footer-links {
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.5rem;
+      margin-bottom: 1rem;
+    }
   }
 }

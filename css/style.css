@@ -1,3 +1,13 @@
+.footer .footer-links .footer-links-item .footer-links-link p, .header-nav .lista .item .link {
+  text-transform: uppercase;
+  color: grey;
+  padding: 0 0.3rem 0.5rem 0.3rem;
+}
+
+.footer .footer-links .footer-links-item .footer-links-link p:hover, .header-nav .lista .item .link:hover {
+  border-bottom: 2px solid grey;
+}
+
 .page {
   font-family: "Ubuntu", sans-serif;
   margin: 0 20%;
@@ -27,17 +37,8 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.header-nav .lista .item .link {
-  text-transform: uppercase;
-  color: grey;
-  padding: 0 0.3rem 0.5rem 0.3rem;
-}
-.header-nav .lista .item .link:hover {
-  border-bottom: 2px solid grey;
-}
-
 .presentation {
-  height: calc(100vh - (265px + 2rem));
+  height: auto;
   padding: 2rem 0 2rem 0;
   margin-bottom: 2rem;
 }
@@ -77,20 +78,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .footer .footer-links .footer-links-item .footer-links-link img {
   width: 50px;
-}
-.footer .footer-links .footer-links-item .footer-links-link p {
-  text-transform: uppercase;
-  color: grey;
-  padding-bottom: 0.5rem;
-}
-.footer .footer-links .footer-links-item .footer-links-link p:hover {
-  border-bottom: 1px solid grey;
-}
-.footer .footer-links .footer-links-item .footer-links-link p:after {
-  content: " | ";
 }
 .footer .copyright {
   color: grey;
@@ -117,7 +108,6 @@
 
   .presentation {
     padding: 2rem 0.5rem;
-    height: calc(100vh - (265px - 1rem));
   }
   .presentation .presentation-content {
     flex-direction: column;
@@ -142,6 +132,13 @@
     justify-content: space-between;
     align-items: center;
     height: 200px;
+  }
+
+  .footer-nav .footer-links {
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
   }
 }
 
