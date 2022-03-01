@@ -1,0 +1,25 @@
+.presentation {
+  height: auto;
+  padding: 2rem 0 2rem 0;
+  margin-bottom: 2rem;
+
+  .presentation-content {
+    @include pattern-flex(justify-content, space-between);
+
+    .presentation-content-img {
+      border-radius: 5px;
+      width: 200px;
+      height: 200px;
+    }
+
+    .presentation-content-text {
+      line-height: 1.5rem;
+      color: $dark-grey;
+      width: calc(100% - (200px + 1rem));
+      background-color: $light-grey;
+      text-align: justify;
+      padding: 0.5rem;
+      font-size: 1.18rem;
+    }
+  }
+}

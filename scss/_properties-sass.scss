@@ -1,0 +1,20 @@
+$light-grey: #dddddd;
+$dark-grey: grey;
+$black: #262a2d;
+$white: #fdfdfd;
+$font-ubuntu: "Ubuntu", sans-serif;
+$border-break: 1px solid $light-grey;
+
+%pattern-link-text {
+  text-transform: uppercase;
+  color: $dark-grey;
+  padding: 0 0.3rem 0.5rem 0.3rem;
+}
+%pattern-link-efect {
+  border-bottom: 2px solid $dark-grey;
+}
+
+@mixin pattern-flex($property, $value) {
+  display: flex;
+  #{$property}: #{$value};
+}

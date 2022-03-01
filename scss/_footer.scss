@@ -1,0 +1,36 @@
+.footer {
+  width: 100%;
+  height: 100px;
+  border-top: $border-break;
+  @include pattern-flex(justify-content, space-between);
+  align-items: center;
+
+  .footer-nav {
+    width: 60%;
+  }
+
+  .footer-links {
+    width: 100%;
+    @include pattern-flex(justify-content, space-between);
+    align-items: center;
+
+    .footer-links-item {
+      .footer-links-link {
+        img {
+          width: 50px;
+        }
+        p {
+          @extend %pattern-link-text;
+
+          &:hover {
+            @extend %pattern-link-efect;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    color: $dark-grey;
+    text-align: center !important;
+  }
+}
