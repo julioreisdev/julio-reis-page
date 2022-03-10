@@ -5,21 +5,14 @@
 
   .presentation-content {
     @include pattern-flex(justify-content, space-between);
+    margin-bottom: 1rem;
 
     .presentation-content-img {
-      border-radius: 5px;
-      width: 200px;
-      height: 200px;
+      @extend %pattern-img-topic;
     }
 
     .presentation-content-text {
-      line-height: 1.5rem;
-      color: $dark-grey;
-      width: calc(100% - (200px + 1rem));
-      background-color: $light-grey;
-      text-align: justify;
-      padding: 0.5rem;
-      font-size: 1.18rem;
+      @extend %pattern-text-topic;
     }
   }
 }

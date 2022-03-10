@@ -10,8 +10,30 @@ $border-break: 1px solid $light-grey;
   color: $dark-grey;
   padding: 0 0.3rem 0.5rem 0.3rem;
 }
+
+%pattern-link-text-simple {
+  /*  */
+}
+
 %pattern-link-efect {
   border-bottom: 2px solid $dark-grey;
+}
+
+%pattern-img-topic {
+  border-radius: 5px;
+  width: 200px;
+  height: 200px;
+}
+
+%pattern-text-topic {
+  line-height: 1.5rem;
+  color: $dark-grey;
+  width: calc(100% - (200px + 1rem));
+  background-color: $light-grey;
+  text-align: justify;
+  padding: 0.5rem;
+  font-size: 1.18rem;
+  box-shadow: 2px 2px 5px rgb(189, 183, 183);
 }
 
 @mixin pattern-flex($property, $value) {
